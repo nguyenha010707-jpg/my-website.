@@ -12,3 +12,18 @@ p {
     line-height: 1.6; 
     max-width: 700px; 
 }
+h2 {
+    color: #2563eb; 
+    border-bottom: 2px solid #e2e8f0; 
+    padding-bottom: 6px; 
+}
+a {
+    color: #0284c7;
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+}
+
+a:hover {
+    color: #ef4444; 
+    text-decoration: underline; 
+}
