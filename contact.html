@@ -21,7 +21,54 @@
     <main>
         <section id="lien-he">
             <h2>Liên hệ với tôi</h2>
-            <p>Form liên hệ sẽ được thiết kế và cập nhật trong các bài Lab tiếp theo.</p>
+            
+            <!-- FORM BÀI TẬP 4 -->
+            <form action="#" method="POST">
+                <!-- Fieldset 1: Thông tin -->
+                <fieldset>
+                    <legend>Thông tin</legend>
+                    
+                    <p>
+                        <label for="name">Họ và tên:</label><br>
+                        <input type="text" id="name" name="name" minlength="2" required>
+                    </p>
+                    
+                    <p>
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" required>
+                    </p>
+                    
+                    <p>
+                        <label for="phone">Số điện thoại:</label><br>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10,11}">
+                    </p>
+                </fieldset>
+
+                <!-- Fieldset 2: Nội dung -->
+                <fieldset>
+                    <legend>Nội dung</legend>
+                    
+                    <p>
+                        <label for="subject">Chủ đề:</label><br>
+                        <select id="subject" name="subject">
+                            <option value="tu-van">Tư vấn dự án</option>
+                            <option value="hop-tac">Hợp tác công việc</option>
+                            <option value="gop-y">Góp ý khác</option>
+                        </select>
+                    </p>
+                    
+                    <p>
+                        <label for="message">Tin nhắn:</label><br>
+                        <textarea id="message" name="message" rows="5" placeholder="Nhập nội dung tin nhắn..."></textarea>
+                    </p>
+                </fieldset>
+
+                <!-- Buttons -->
+                <p>
+                    <button type="submit">Gửi</button>
+                    <button type="reset">Xóa</button>
+                </p>
+            </form>
         </section>
     </main>
 
