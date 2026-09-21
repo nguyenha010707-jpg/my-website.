@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Huỳnh Nguyễn Hà - Liên hệ</title>
 </head>
 <body>
     <header>
-        <h1>Huỳnh Nguyễn Hà</h1>
+        <h1 id="main-title">Huỳnh Nguyễn Hà</h1>
         <p>Sinh viên Công nghệ thông tin - Kỹ thuật phần mềm</p>
     </header>
 
@@ -19,57 +22,58 @@
     </nav>
 
     <main>
-        <section id="lien-he">
-            <h2>Liên hệ với tôi</h2>
-            
-            <!-- FORM BÀI TẬP 4 -->
-            <form action="#" method="POST">
-                <!-- Fieldset 1: Thông tin -->
-                <fieldset>
-                    <legend>Thông tin</legend>
-                    
-                    <p>
-                        <label for="name">Họ và tên:</label><br>
-                        <input type="text" id="name" name="name" minlength="2" required>
-                    </p>
-                    
-                    <p>
-                        <label for="email">Email:</label><br>
-                       <input type="email" pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$" placeholder="Nhập Gmail..." required>
-                    </p>
-                    
-                    <p>
-                        <label for="phone">Số điện thoại:</label><br>
-                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10,11}">
-                    </p>
-                </fieldset>
+        <div class="card">
+            <section id="lien-he">
+                <h2>Liên hệ với tôi</h2>
+                
+                <form action="#" method="POST">
+                    <!-- Fieldset 1: Thông tin -->
+                    <fieldset>
+                        <legend>Thông tin</legend>
+                        
+                        <p>
+                            <label for="name">Họ và tên:</label><br>
+                            <input type="text" id="name" name="name" minlength="2" required>
+                        </p>
+                        
+                        <p>
+                            <label for="email">Email:</label><br>
+                            <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$" placeholder="Nhập Gmail..." required>
+                        </p>
+                        
+                        <p>
+                            <label for="phone">Số điện thoại:</label><br>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10,11}">
+                        </p>
+                    </fieldset>
 
-                <!-- Fieldset 2: Nội dung -->
-                <fieldset>
-                    <legend>Nội dung</legend>
-                    
-                    <p>
-                        <label for="subject">Chủ đề:</label><br>
-                        <select id="subject" name="subject">
-                            <option value="tu-van">Tư vấn dự án</option>
-                            <option value="hop-tac">Hợp tác công việc</option>
-                            <option value="gop-y">Góp ý khác</option>
-                        </select>
-                    </p>
-                    
-                    <p>
-                        <label for="message">Tin nhắn:</label><br>
-                        <textarea id="message" name="message" rows="5" placeholder="Nhập nội dung tin nhắn..."></textarea>
-                    </p>
-                </fieldset>
+                    <!-- Fieldset 2: Nội dung -->
+                    <fieldset>
+                        <legend>Nội dung</legend>
+                        
+                        <p>
+                            <label for="subject">Chủ đề:</label><br>
+                            <select id="subject" name="subject">
+                                <option value="tu-van">Tư vấn dự án</option>
+                                <option value="hop-tac">Hợp tác công việc</option>
+                                <option value="gop-y">Góp ý khác</option>
+                            </select>
+                        </p>
+                        
+                        <p>
+                            <label for="message">Tin nhắn:</label><br>
+                            <textarea id="message" name="message" rows="5" placeholder="Nhập nội dung tin nhắn..."></textarea>
+                        </p>
+                    </fieldset>
 
-                <!-- Buttons -->
-                <p>
-                    <button type="submit">Gửi</button>
-                    <button type="reset">Xóa</button>
-                </p>
-            </form>
-        </section>
+                    <!-- Buttons -->
+                    <p>
+                        <button type="submit">Gửi</button>
+                        <button type="reset">Xóa</button>
+                    </p>
+                </form>
+            </section>
+        </div>
     </main>
 
     <footer>
