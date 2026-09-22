@@ -1,6 +1,6 @@
-# My Website - Portfolio Cá Nhân (Lab 1 & Lab 2)
+# My Website - Portfolio Cá Nhân (Lab 1, Lab 2 & Lab 3)
 
-Dự án website cá nhân được xây dựng trong khuôn khổ môn học **Lập trình Web** tại trường **Đại học Gia Định**. Dự án áp dụng chuẩn **HTML5 Semantic**, hệ thống **biểu mẫu & HTML5 Validation**, tối ưu **SEO Onpage**, tiêu chuẩn tiếp cận **Accessibility (WCAG 2.2)** và định kiểu giao diện bằng **CSS3**.
+Dự án website cá nhân được xây dựng trong khuôn khổ môn học **Lập trình Web** tại trường **Đại học Gia Định**. Dự án áp dụng chuẩn **HTML5 Semantic**, hệ thống **biểu mẫu & HTML5 Validation**, tối ưu **SEO Onpage**, tiêu chuẩn tiếp cận **Accessibility (WCAG 2.2)** và định kiểu giao diện hiện đại bằng **CSS3 (CSS Reset, Selectors, Box Model, Typography)**.
 
 ---
 
@@ -18,12 +18,12 @@ Dự án website cá nhân được xây dựng trong khuôn khổ môn học **
 ```text
 my-website/
 │
-├── index.html       # Trang chủ: Giới thiệu chung, hình ảnh dự án Lab 1
-├── about.html       # Trang giới thiệu: Thông tin cá nhân, sở thích, mục tiêu, bảng môn học
+├── index.html       # Trang chủ: Giới thiệu chung, hình ảnh dự án Lab 1, layout card
+├── about.html       # Trang giới thiệu: Thông tin cá nhân, sở thích, mục tiêu, bảng môn học, class highlight
 ├── contact.html     # Trang liên hệ: Biểu mẫu liên hệ với HTML5 Validation chuẩn
 │
 ├── css/
-│   └── style.css    # CSS định dạng giao diện, Box Model, Reset CSS, Card & Form Styling
+│   └── style.css    # CSS chuẩn hóa: CSS Reset (*, *::before, *::after), Box Model, Typography, Form & Table styling
 │
 ├── images/
 │   └── project.png  # Ảnh chụp giao diện minh hoạ dự án
@@ -41,39 +41,42 @@ my-website/
 - Xây dựng bảng môn học (Table) có `<thead>`, `<tbody>`, `<tfoot>`, `<caption>`.
 - Định kiểu giao diện bằng CSS (`css/style.css`): Box-sizing reset, font chữ Google Fonts `Inter`, bảng màu hài hoà, card layout với `box-shadow` và `border-radius`.
 
-### 2. Lab 2 - Bài tập 03: Biểu mẫu HTML5 & Validation thuần
-- Form liên hệ hoàn chỉnh trong `contact.html` với cấu trúc chuẩn:
-  - Thẻ `<form action="#" method="POST">`.
-  - **Fieldset 1 – Thông tin cá nhân**:
-    - Họ và tên (`text`, `required`, `minlength="2"`, `maxlength="100"`).
-    - Email (`email`, `required`, placeholder gợi ý).
-    - Số điện thoại (`tel`, `pattern="[0-9]{10,11}"`, tooltip báo lỗi với `title`).
-    - *Tính năng nâng cao*: Ô chọn Ngày sinh (`type="date"`).
-    - *Tính năng nâng cao*: Gợi ý trường đại học qua thẻ `<datalist>` với các lựa chọn tiêu biểu.
-  - **Fieldset 2 – Nội dung liên hệ**:
-    - Chọn chủ đề liên hệ với `<select>` và các `<option>`.
-    - Lựa chọn kênh ưu tiên liên hệ (Email / Điện thoại / Zalo) dạng radio buttons nằm trong `<fieldset>` con.
-    - Ô nhập tin nhắn (`<textarea>`, `rows="5"`, `required`, `minlength="10"`, `maxlength="500"`).
-    - Checkbox xác nhận đồng ý điều khoản sử dụng (`required`).
-  - Nút bấm điều khiển:
-    - `<button type="submit">`: Gửi tin nhắn và kích hoạt HTML5 Validation.
-    - `<button type="reset">`: Xoá và đưa biểu mẫu về trạng thái ban đầu.
+### 2. Lab 2: Biểu mẫu HTML5, Validation thuần & SEO Onpage
+- **Form liên hệ hoàn chỉnh (`contact.html`)**:
+  - Phân chia 2 fieldset: `Thông tin cá nhân` và `Nội dung liên hệ`.
+  - Đầy đủ các trường: `fullname` (text, required, minlength=2), `email` (email, required), `phone` (tel, regex pattern 10-11 số), `subject` (select 3 tùy chọn), kênh ưu tiên (3 radio buttons), `message` (textarea required, minlength=10), checkbox điều khoản (required).
+  - *Nâng cao*: Ô chọn Ngày sinh (`type="date"`) và danh sách gợi ý trường đại học (`<datalist>`).
+  - Nút bấm điều khiển: `<button type="submit">` và `<button type="reset">`.
+- **Tối ưu SEO & Metadata**:
+  - Thẻ `<title>`: Chuẩn 50–60 ký tự, chứa tên sinh viên và từ khóa chính.
+  - Thẻ `<meta name="description">`: Chuẩn 150–160 ký tự, mở đầu bằng động từ hành động.
+  - Thẻ Open Graph metadata (`og:title`, `og:description`, `og:type`, `og:url`) cho Zalo/Facebook.
+  - Tiêu chuẩn Accessibility (WCAG 2.2): Quy tắc bắt buộc `label[for]` trỏ đúng `input[id]`, mỗi trang duy nhất 1 thẻ `<h1>`, tất cả ảnh có thuộc tính `alt` mô tả nội dung.
 
-### 3. Lab 2 - Bài tập 04: SEO, Accessibility & Open Graph Metadata
-- **Thẻ `<title>`**: Đạt chuẩn độ dài từ 50–60 ký tự, chứa tên sinh viên và từ khoá chính:
-  - Trang chủ: `Huỳnh Nguyễn Hà – Portfolio Cá Nhân | Đại Học Gia Định` (54 ký tự).
-  - Trang giới thiệu: `Huỳnh Nguyễn Hà – Giới Thiệu Bản Thân | ĐH Gia Định` (51 ký tự).
-  - Trang liên hệ: `Huỳnh Nguyễn Hà – Liên Hệ Trực Tiếp | Đại Học Gia Định` (54 ký tự).
-- **Thẻ `<meta name="description">`**: Đạt chuẩn độ dài từ 150–160 ký tự, mở đầu bằng động từ hành động mô tả nội dung trang:
-  - Trang chủ: 159 ký tự (bắt đầu bằng *"Khám phá..."*).
-  - Trang giới thiệu: 160 ký tự (bắt đầu bằng *"Tìm hiểu..."*).
-  - Trang liên hệ: 156 ký tự (bắt đầu bằng *"Liên hệ..."*).
-- **Thẻ Open Graph (`og:title`, `og:description`, `og:type`, `og:url`)**: Hỗ trợ hiển thị card preview đẹp mắt khi chia sẻ liên kết trên Facebook, Zalo, LinkedIn.
-- **Tiêu chuẩn Accessibility (WCAG 2.2)**:
-  - Quy tắc bắt buộc `label[for]` khớp chính xác với `input[id]` cho tất cả các trường nhập liệu trong biểu mẫu.
-  - Mỗi trang có duy nhất 1 thẻ `<h1>` chính, phân cấp heading mạch lạc (`<h1>` -> `<h2>`).
-  - Toàn bộ hình ảnh `<img>` đều có thuộc tính `alt` mô tả nội dung trực quan, rõ nghĩa.
-  - Các phần tử form, liên kết và button có thể điều hướng mượt mà bằng bàn phím (Tab key).
+### 3. Lab 3 - Bài tập 01: CSS Selectors, Reset & Box Model
+- **CSS Reset chuẩn ở đầu file**:
+  ```css
+  *, *::before, *::after {
+      box-sizing: border-box; /* width bao gồm cả padding + border */
+      margin: 0;
+      padding: 0;
+  }
+  ```
+- **Typography & Base Styles**:
+  - `body`: font-family `'Inter'`, Arial, sans-serif; màu nền `#f4f7fb`, màu chữ `#1e293b`, `line-height: 1.6`.
+  - `p`: màu `#334155`, `line-height: 1.7`.
+  - `a`: màu `#1d6fa4`, hiệu ứng hover `#0d9488` có gạch chân.
+- **Header & Navigation tối màu**:
+  - `header`: màu nền `#1a2e5a`, padding `16px 32px`, chữ màu trắng, tiêu đề h1 `1.5rem bold`.
+  - Menu điều hướng con `header nav a`: màu `#93c5fd`, `margin-left: 20px`, hiệu ứng hover màu trắng.
+- **Layout Main & Box Model Card**:
+  - `main`: căn giữa với `max-width: 800px; margin: 0 auto; padding: 32px 16px;`.
+  - `.card`: `background: white; padding: 24px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 24px;`.
+- **Footer**:
+  - `footer`: màu nền `#1e293b`, chữ `#94a3b8`, căn giữa, padding `24px 32px`, `margin-top: 48px`, link `footer a` màu `#93c5fd`.
+- **Tính năng nâng cao**:
+  - Áp dụng class `.highlight` (`background: #fef3c7; padding: 4px 8px; border-radius: 4px;`) vào đoạn văn nổi bật trong `about.html`.
+  - Đảm bảo Google Font `'Inter'` được nhúng chính xác vào thẻ `<head>` của cả 3 trang trước file `css/style.css`.
 
 ---
 
