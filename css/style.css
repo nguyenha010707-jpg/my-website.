@@ -120,6 +120,24 @@ input, select, textarea {
     font-family: inherit;
 }
 
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-top: 0;
+}
+
+fieldset fieldset {
+    margin: 8px 0 16px 0;
+    padding: 12px;
+}
+
+fieldset fieldset label {
+    cursor: pointer;
+    margin-right: 12px;
+}
+
 button {
     padding: 8px 16px;
     margin-right: 8px;
@@ -128,6 +146,12 @@ button {
     cursor: pointer;
     background-color: #1a2e5a;
     color: white;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+button:hover {
+    opacity: 0.9;
 }
 
 button[type="reset"] {
