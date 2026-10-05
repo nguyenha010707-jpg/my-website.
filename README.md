@@ -94,6 +94,20 @@ my-website/
   - `display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px;`.
   - 5 thẻ kỹ năng (`.skill-card`): HTML5, CSS3 & SCSS, JavaScript, Git & GitHub, Web Design với hiệu ứng hover sinh động.
 
+### 5. Lab 3 - Bài tập 5: Thiết kế Responsive Design (Mobile-First)
+- **Mobile Default (< 768px)**:
+  - Bố cục 1 cột (`1fr`), `sidebar` tự động ẩn (`display: none;`).
+  - Font-size và padding giảm phù hợp với màn hình di động, menu `nav` xếp dọc (`flex-direction: column;`).
+  - Lưới kỹ năng `.skills-grid` chuyển thành 1 cột xếp chồng.
+  - Đảm bảo không bị lỗi tràn ngang (horizontal scroll).
+- **Tablet (≥ 768px)**:
+  - Bố cục 2 cột (`180px + 1fr`), `sidebar` hiển thị lại (`display: block;`).
+  - Menu `nav` chuyển thành hàng ngang (`flex-direction: row;`).
+  - Lưới kỹ năng `.skills-grid` chia thành 2 cột (`repeat(2, 1fr)`).
+- **Desktop (≥ 1024px)**:
+  - `sidebar` mở rộng thành 240px (`240px + 1fr`).
+  - Lưới kỹ năng tự động điều chỉnh nhiều cột (`repeat(auto-fill, minmax(200px, 1fr))`).
+
 ---
 
 ## 🛠 Hướng dẫn chạy dự án trên VS Code
