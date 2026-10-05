@@ -78,6 +78,22 @@ my-website/
   - Áp dụng class `.highlight` (`background: #fef3c7; padding: 4px 8px; border-radius: 4px;`) vào đoạn văn nổi bật trong `about.html`.
   - Đảm bảo Google Font `'Inter'` được nhúng chính xác vào thẻ `<head>` của cả 3 trang trước file `css/style.css`.
 
+### 4. Lab 3 - Bài tập 4: Bố cục CSS Grid Layout (trang `about.html`)
+- **Bố cục phân vùng `.page-layout`**:
+  - `display: grid;` với 2 cột (`220px 1fr`), 3 hàng (`auto 1fr auto`).
+  - Định nghĩa vùng bằng `grid-template-areas`:
+    ```text
+    "header header"
+    "sidebar main"
+    "footer footer"
+    ```
+  - `min-height: 100vh;` đảm bảo phủ kín màn hình, footer tự động neo ở đáy.
+- **Thanh bên `<aside class="sidebar">`**:
+  - Nền màu `#f1f5f9`, chứa danh sách liên kết nhanh (Quick Links) cuộn đến các phần trong trang.
+- **Lưới thẻ kỹ năng `.skills-grid`**:
+  - `display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px;`.
+  - 5 thẻ kỹ năng (`.skill-card`): HTML5, CSS3 & SCSS, JavaScript, Git & GitHub, Web Design với hiệu ứng hover sinh động.
+
 ---
 
 ## 🛠 Hướng dẫn chạy dự án trên VS Code

@@ -18,91 +18,132 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1 id="main-title">Huỳnh Nguyễn Hà</h1>
-        <p>Sinh viên Công nghệ thông tin - Kỹ thuật phần mềm</p>
-        <nav>
-            <a href="index.html">Trang chủ</a>
-            <a href="about.html">Giới thiệu</a>
-            <a href="contact.html">Liên hệ</a>
-            <a href="https://github.com/nguyenha010707-jpg/my-website..git" target="_blank" rel="noopener noreferrer">GitHub của tôi</a>
-        </nav>
-    </header>
+    <div class="page-layout">
+        <header>
+            <h1 id="main-title">Huỳnh Nguyễn Hà</h1>
+            <p>Sinh viên Công nghệ thông tin - Kỹ thuật phần mềm</p>
+            <nav>
+                <a href="index.html">Trang chủ</a>
+                <a href="about.html">Giới thiệu</a>
+                <a href="contact.html">Liên hệ</a>
+                <a href="https://github.com/nguyenha010707-jpg/my-website..git" target="_blank" rel="noopener noreferrer">GitHub của tôi</a>
+            </nav>
+        </header>
 
-    <main>
-        <div class="card">
-            <section id="thong-tin">
-                <h2>Thông tin cá nhân</h2>
-                <figure>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtYKca92lfFJlV1KgCXhjIzoAAJXD1aVMZdeJsA8fUmA&s=10" alt="Ảnh đại diện của sinh viên Huỳnh Nguyễn Hà">
-                    <figcaption>Hình 1: Ảnh đại diện</figcaption>
-                </figure>
-                <p>Họ tên: <strong>Huỳnh Nguyễn Hà</strong></p>
-                <p>Quê quán: Bình Định</p>
-                <p class="highlight">Ngành học: Công nghệ thông tin - Kỹ thuật phần mềm tại Đại học Gia Định</p>
-                <p>Năm học: 2026-2027</p>
-                <a href="#muc-tieu">Xem mục tiêu học kỳ này</a>
-            </section>
-
-            <section id="so-thich">
-                <h2>Sở thích</h2>
+        <aside class="sidebar">
+            <h3>Liên kết nhanh</h3>
+            <nav class="sidebar-nav">
                 <ul>
-                    <li>Nghiên cứu và học lập trình</li>
-                    <li>Chơi game online (Honkai: Star Rail, Genshin Impact)</li>
-                    <li>Nghe nhạc khi làm việc</li>
+                    <li><a href="#thong-tin">Thông tin cá nhân</a></li>
+                    <li><a href="#so-thich">Sở thích</a></li>
+                    <li><a href="#muc-tieu">Mục tiêu học kỳ</a></li>
+                    <li><a href="#skills">Kỹ năng lập trình</a></li>
+                    <li><a href="#mon-hoc">Bảng môn học</a></li>
                 </ul>
-            </section>
+            </nav>
+        </aside>
 
-            <section id="muc-tieu">
-                <h2>Mục tiêu học kỳ này</h2>
-                <ol>
-                    <li>Qua môn</li>
-                    <li>Đạt được điểm A 4 môn</li>
-                    <li>Nâng cao được khả năng lập trình web</li>
-                </ol>
-            </section>
+        <main>
+            <div class="card">
+                <section id="thong-tin">
+                    <h2>Thông tin cá nhân</h2>
+                    <figure>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtYKca92lfFJlV1KgCXhjIzoAAJXD1aVMZdeJsA8fUmA&s=10" alt="Ảnh đại diện của sinh viên Huỳnh Nguyễn Hà">
+                        <figcaption>Hình 1: Ảnh đại diện</figcaption>
+                    </figure>
+                    <p>Họ tên: <strong>Huỳnh Nguyễn Hà</strong></p>
+                    <p>Quê quán: Bình Định</p>
+                    <p class="highlight">Ngành học: Công nghệ thông tin - Kỹ thuật phần mềm tại Đại học Gia Định</p>
+                    <p>Năm học: 2026-2027</p>
+                    <a href="#muc-tieu">Xem mục tiêu học kỳ này</a>
+                </section>
 
-            <section id="mon-hoc">
-                <h2>Bảng môn học</h2>
-                <table>
-                    <caption>Danh sách môn học</caption>
-                    <thead>
-                        <tr>
-                            <th>Môn học</th>
-                            <th>Số TC</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Lập trình Web</td>
-                            <td>3</td>
-                        </tr>
-                        <tr>
-                            <td>Cấu trúc dữ liệu</td>
-                            <td>3</td>
-                        </tr>
-                        <tr>
-                            <td>Mạng máy tính</td>
-                            <td>3</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td>Tổng</td>
-                            <td>9 TC</td>
-                        </tr>
-                    </tfoot>
-                </table>
-            </section>
-        </div>
-    </main>
+                <section id="so-thich">
+                    <h2>Sở thích</h2>
+                    <ul>
+                        <li>Nghiên cứu và học lập trình</li>
+                        <li>Chơi game online (Honkai: Star Rail, Genshin Impact)</li>
+                        <li>Nghe nhạc khi làm việc</li>
+                    </ul>
+                </section>
 
-    <footer>
-        <address>
-            Email: <a href="mailto:huynhnguyenha@gmail.com">huynhnguyenha@gmail.com</a><br>
-            Điện thoại: <a href="tel:+84965094570">0965 094 570</a>
-        </address>
-        <p>&copy; 2026 Huỳnh Nguyễn Hà. Cập nhật lần cuối: <time datetime="2026-09-15">15/09/2026</time>.</p>
-    </footer>
+                <section id="muc-tieu">
+                    <h2>Mục tiêu học kỳ này</h2>
+                    <ol>
+                        <li>Qua môn</li>
+                        <li>Đạt được điểm A 4 môn</li>
+                        <li>Nâng cao được khả năng lập trình web</li>
+                    </ol>
+                </section>
+
+                <section id="skills">
+                    <h2>Kỹ năng lập trình</h2>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <h3>HTML5</h3>
+                            <p>Semantic tags, Web Forms, Validation & WCAG Accessibility</p>
+                        </div>
+                        <div class="skill-card">
+                            <h3>CSS3 & SCSS</h3>
+                            <p>Box Model, Flexbox, CSS Grid Layout, Typography & Responsive</p>
+                        </div>
+                        <div class="skill-card">
+                            <h3>JavaScript</h3>
+                            <p>Cú pháp hiện đại ES6+, tương tác sự kiện và thao tác DOM</p>
+                        </div>
+                        <div class="skill-card">
+                            <h3>Git & GitHub</h3>
+                            <p>Quản lý phiên bản mã nguồn, commit, push và teamwork</p>
+                        </div>
+                        <div class="skill-card">
+                            <h3>Web Design</h3>
+                            <p>Thiết kế giao diện người dùng UX/UI thân thiện, hiện đại</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="mon-hoc">
+                    <h2>Bảng môn học</h2>
+                    <table>
+                        <caption>Danh sách môn học</caption>
+                        <thead>
+                            <tr>
+                                <th>Môn học</th>
+                                <th>Số TC</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lập trình Web</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Cấu trúc dữ liệu</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Mạng máy tính</td>
+                                <td>3</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>Tổng</td>
+                                <td>9 TC</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <address>
+                Email: <a href="mailto:huynhnguyenha@gmail.com">huynhnguyenha@gmail.com</a><br>
+                Điện thoại: <a href="tel:+84965094570">0965 094 570</a>
+            </address>
+            <p>&copy; 2026 Huỳnh Nguyễn Hà. Cập nhật lần cuối: <time datetime="2026-09-15">15/09/2026</time>.</p>
+        </footer>
+    </div>
 </body>
 </html>
