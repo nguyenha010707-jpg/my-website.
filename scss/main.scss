@@ -1,0 +1,7 @@
+// scss/main.scss
+// Thứ tự import quan trọng: variables trước, responsive sau cùng
+@use 'variables';
+@use 'reset';
+@use 'components';
+@use 'layout';
+@use 'responsive';

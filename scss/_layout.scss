@@ -1,0 +1,214 @@
+// scss/_layout.scss
+@use 'variables' as *;
+@use 'components' as *;
+
+header {
+    background-color: $color-primary;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    padding: $spacing * 2;
+    background-color: $color-primary;
+}
+
+.logo {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+
+    h1, #main-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: white;
+        margin: 0;
+    }
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing;
+    align-items: center;
+
+    a {
+        color: #93c5fd;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 4px $spacing;
+
+        &:hover {
+            color: white;
+            text-decoration: underline;
+        }
+    }
+}
+
+.hero {
+    @include flex-center(column);
+    min-height: 300px;
+    background-color: $color-secondary;
+    color: white;
+    text-align: center;
+    padding: ($spacing * 6) ($spacing * 3);
+    gap: $spacing * 2;
+    border-radius: $radius;
+    margin-bottom: $spacing * 3;
+
+    h2 {
+        font-size: 2rem;
+        color: white;
+        border-bottom: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    p {
+        color: #f1f5f9;
+        font-size: 1.1rem;
+        margin: 0;
+    }
+}
+
+.cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing * 3;
+    margin-bottom: $spacing * 3;
+
+    .card {
+        flex: 1;
+        min-width: 250px;
+        margin-bottom: 0;
+
+        h3 {
+            color: $color-primary;
+            font-size: 1.25rem;
+            margin-bottom: $spacing;
+        }
+
+        p {
+            color: #64748b;
+            margin-bottom: 0;
+        }
+    }
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: ($spacing * 4) ($spacing * 2);
+}
+
+.page-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    min-height: 100vh;
+
+    header {
+        grid-area: header;
+        padding: 0;
+
+        h1 {
+            font-size: 1.25rem;
+        }
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+        display: none;
+        background-color: #f1f5f9;
+        padding: 20px 16px;
+        border-radius: $radius;
+        align-self: start;
+        border-right: 1px solid #e2e8f0;
+    }
+
+    main {
+        grid-area: main;
+        max-width: 100%;
+        padding: 16px 12px;
+    }
+
+    footer {
+        grid-area: footer;
+        margin-top: 0;
+    }
+}
+
+.sidebar {
+    h3 {
+        color: $color-primary;
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+
+    .sidebar-nav {
+        ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0284c7;
+            text-decoration: none;
+            font-weight: 500;
+            display: block;
+            padding: 6px 10px;
+            border-radius: 4px;
+            transition: background-color 0.2s, color 0.2s;
+
+            &:hover {
+                background-color: #e2e8f0;
+                color: #0369a1;
+            }
+        }
+    }
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    background-color: $color-text;
+    color: $color-text-muted;
+    padding: 20px 16px;
+    margin-top: 48px;
+
+    a {
+        color: #93c5fd;
+    }
+
+    address {
+        font-style: normal;
+        text-align: center;
+    }
+
+    p {
+        margin-bottom: 0;
+        text-align: center;
+    }
+}

@@ -1,0 +1,21 @@
+// scss/_variables.scss
+// Màu sắc
+$color-primary: #1a2e5a;
+$color-secondary: #1d6fa4;
+$color-accent: #0d9488;
+$color-bg: #f4f7fb;
+$color-text: #1e293b;
+$color-text-muted: #94a3b8;
+
+// Typography
+$font-base: 'Inter', Arial, Helvetica, sans-serif;
+$font-size-base: 1rem;
+$line-height: 1.6;
+
+// Spacing
+$spacing: 8px;
+
+// Border radius & Shadow
+$radius: 8px;
+$shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+$shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.08);

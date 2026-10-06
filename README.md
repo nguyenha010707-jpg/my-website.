@@ -121,6 +121,17 @@ my-website/
   - `sidebar` mở rộng thành 240px (`240px + 1fr`).
   - Lưới kỹ năng tự động điều chỉnh nhiều cột (`repeat(auto-fill, minmax(200px, 1fr))`).
 
+### 6. Lab 3.4: Tái cấu trúc sang SCSS (Sass Architecture)
+- **Cấu trúc thư mục `scss/` gồm 5 partials + `main.scss`**:
+  - `_variables.scss`: Quản lý tập trung biến màu sắc, typography, khoảng cách `$spacing`, `$radius` và `$shadow`.
+  - `_reset.scss`: CSS Reset và base typography.
+  - `_components.scss`: Mixins tái sử dụng (`@mixin flex-center`, `@mixin card-style`), nút bấm placeholder (`%btn-base`), `.btn-primary` (`@extend`), cùng các thành phần card, form, table.
+  - `_layout.scss`: Định nghĩa cấu trúc khung lớn (.navbar, .hero, .cards-grid, .page-layout, .sidebar, footer).
+  - `_responsive.scss`: Tập trung toàn bộ media queries cho Tablet (768px), Desktop (1024px) và Landscape.
+  - `main.scss`: Import toàn bộ partials theo chuẩn `@use`.
+- **Biên dịch tự động**:
+  - Biên dịch tự động từ `scss/main.scss` sang `css/style.css` bằng Sass compiler: `sass --watch scss/main.scss:css/style.css`.
+
 ---
 
 ## 🛠 Hướng dẫn chạy dự án trên VS Code
