@@ -357,6 +357,8 @@ footer p {
     display: none; /* Sidebar ẩn trên mobile */
     background-color: #f1f5f9;
     padding: 20px 16px;
+    border-radius: 8px;
+    align-self: start;
     border-right: 1px solid #e2e8f0;
 }
 
@@ -411,10 +413,12 @@ footer p {
 }
 
 .skill-card {
-    background: #f8fafc;
+    background: white;
     border: 1px solid #e2e8f0;
+    border-left: 4px solid #1d6fa4;
     border-radius: 8px;
-    padding: 16px;
+    padding: 16px 20px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -483,6 +487,7 @@ footer p {
             "header header"
             "sidebar main"
             "footer footer";
+        gap: 24px;
     }
 
     .page-layout .sidebar {
@@ -503,6 +508,7 @@ footer p {
 @media (min-width: 1024px) {
     .page-layout {
         grid-template-columns: 240px 1fr;
+        gap: 32px;
     }
 
     .page-layout main {
@@ -511,5 +517,13 @@ footer p {
 
     .skills-grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Desktop = auto-fill */
+    }
+}
+
+/* 4. Landscape Orientation (Nâng cao) */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: 200px;
+        padding: 24px 16px;
     }
 }
