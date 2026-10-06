@@ -78,7 +78,20 @@ my-website/
   - Áp dụng class `.highlight` (`background: #fef3c7; padding: 4px 8px; border-radius: 4px;`) vào đoạn văn nổi bật trong `about.html`.
   - Đảm bảo Google Font `'Inter'` được nhúng chính xác vào thẻ `<head>` của cả 3 trang trước file `css/style.css`.
 
-### 4. Lab 3 - Bài tập 4: Bố cục CSS Grid Layout (trang `about.html`)
+### 4. Lab 3.2: Flexbox Layout (Navbar, Hero Section & Cards Grid)
+- **Navbar Flexbox**:
+  - `display: flex; justify-content: space-between; align-items: center;`.
+  - Logo nằm bên trái, danh sách liên kết `nav-links` nằm bên phải.
+- **Hero Section (`section.hero`)**:
+  - `display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 300px;`.
+  - Nút kêu gọi hành động `.btn-primary` có hiệu ứng hover đổi màu nền.
+- **Cards Grid tự responsive (`.cards-grid`)**:
+  - `display: flex; flex-wrap: wrap; gap: 24px;`.
+  - Mỗi thẻ `.card` có `flex: 1; min-width: 250px;`, tự động xuống dòng khi màn hình < 800px mà không cần media query.
+- **(Nâng cao) Footer Flexbox**:
+  - `display: flex; justify-content: space-between;` phân tách 2 cột (thông tin liên hệ bên trái, bản quyền bên phải).
+
+### 5. Lab 3.3: Bố cục CSS Grid Layout (trang `about.html`)
 - **Bố cục phân vùng `.page-layout`**:
   - `display: grid;` với 2 cột (`220px 1fr`), 3 hàng (`auto 1fr auto`).
   - Định nghĩa vùng bằng `grid-template-areas`:

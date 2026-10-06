@@ -52,44 +52,127 @@ h2 {
     color: white;
 }
 
-/* Header & Navigation */
+/* Header & Navbar Flexbox */
 header {
     background-color: #1a2e5a;
-    padding: 16px 32px;
     color: white;
-    text-align: center;
 }
 
-header h1 {
-    font-size: 1.5rem;
+.navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    padding: 16px;
+    background-color: #1a2e5a;
+}
+
+.logo {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.logo h1, .logo #main-title {
+    font-size: 1.25rem;
     font-weight: bold;
     color: white;
+    margin: 0;
 }
 
-header p {
-    color: #cbd5e1;
-    font-size: 0.95rem;
-    margin-top: 4px;
-}
-
-header nav {
-    margin-top: 12px;
+.nav-links {
     display: flex;
     flex-direction: column;
     gap: 8px;
     align-items: center;
 }
 
-header nav a, nav a {
+.nav-links a {
     color: #93c5fd;
     text-decoration: none;
     font-weight: 500;
     padding: 4px 8px;
 }
 
-header nav a:hover, nav a:hover {
+.nav-links a:hover {
     color: white;
     text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    background-color: #1d6fa4;
+    color: white;
+    text-align: center;
+    padding: 48px 24px;
+    gap: 16px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: white;
+    border-bottom: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hero p {
+    color: #f1f5f9;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: white;
+    color: #1a2e5a;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #e2e8f0;
+    color: #1a2e5a;
+    text-decoration: none;
+}
+
+/* Cards Grid (Flexbox tự responsive) */
+.cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.cards-grid .card {
+    flex: 1;
+    min-width: 250px;
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 0;
+}
+
+.cards-grid .card h3 {
+    color: #1a2e5a;
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+}
+
+.cards-grid .card p {
+    color: #64748b;
+    margin-bottom: 0;
 }
 
 /* Main & Card */
@@ -219,12 +302,16 @@ th {
     background-color: #f1f5f9;
 }
 
-/* Footer */
+/* Footer Flexbox */
 footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
     background-color: #1e293b;
     color: #94a3b8;
-    text-align: center;
-    padding: 24px 32px;
+    padding: 20px 16px;
     margin-top: 48px;
 }
 
@@ -234,6 +321,12 @@ footer a {
 
 footer address {
     font-style: normal;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 0;
+    text-align: center;
 }
 
 /* CSS Grid & Responsive Design (Mobile-First) */
@@ -252,11 +345,11 @@ footer address {
 
 .page-layout header {
     grid-area: header;
-    padding: 16px;
+    padding: 0;
 }
 
 .page-layout header h1 {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
 }
 
 .page-layout .sidebar {
@@ -306,7 +399,6 @@ footer address {
 .page-layout footer {
     grid-area: footer;
     margin-top: 0;
-    padding: 20px 16px;
 }
 
 /* Skills Grid: Mobile = 1 cột */
@@ -344,33 +436,45 @@ footer address {
     line-height: 1.5;
 }
 
-/* 2. Tablet (>= 768px): Sidebar hiện, 2 cột (180px + 1fr), nav row, skills 2 cột */
+/* 2. Tablet (>= 768px): Navbar flex row, Sidebar hiện, 2 cột (180px + 1fr), skills 2 cột */
 @media (min-width: 768px) {
-    header {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
         padding: 16px 32px;
     }
 
-    header h1 {
-        font-size: 1.5rem;
-    }
-
-    header nav {
+    .nav-links {
         flex-direction: row;
-        justify-content: center;
         gap: 0;
     }
 
-    header nav a, nav a {
-        margin-left: 20px;
+    .nav-links a {
+        margin-left: 24px;
         padding: 0;
     }
 
-    header nav a:first-child, nav a:first-child {
+    .nav-links a:first-child {
         margin-left: 0;
     }
 
     .card {
         padding: 24px;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        padding: 24px 32px;
+    }
+
+    footer address {
+        text-align: left;
+    }
+
+    footer p {
+        text-align: right;
     }
 
     .page-layout {
